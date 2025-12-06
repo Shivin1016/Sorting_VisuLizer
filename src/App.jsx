@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import "./components/SortingVs";
-import SortingVs from "./components/SortingVs";
-import Control from "./components/control";
+import SortingVs from "./components/SortingVs"; 
 import { bubbleSort } from "./algorithm/bubbleSort";
 import { MergeSort } from "./algorithm/mergeSort";
-import { selectionSort } from "./algorithm/selectionSort";
+import { selectionSort } from "./algorithm/selectionSort";  
+import Control from "./components/Control";
+  
+
 
 function App() {
   const [array, setArray] = useState([]);
@@ -48,9 +50,11 @@ function App() {
       case "Merge Sorting":
         animationArr = MergeSort(array);
         mergeAnimation(animationArr);
+        break;
       case "Selection Sorting":
         animationArr = selectionSort(array);
         selectionAnimation(animationArr);
+        break;
 
       default:
         break;
